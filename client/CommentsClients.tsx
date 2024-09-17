@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { format } from "date-fns";
+// import { format } from "date-fns";
 
 function delayedFetch(url: string, options: any, delay: number) {
   return new Promise((resolve, reject) => {
@@ -32,10 +32,10 @@ export function CommentsClient({ id }: { id: string }) {
       <ul>
         {data?.map((item: any) => (
           <li key={item.id}>
-            <h3>{item.name}</h3>
-            <p>{item.email}</p>
-            <p>{item.body}</p>
-            <p>{format(new Date(2014, 1, 11), "yyyy-MM-dd")}</p>
+            <p>Name : {item.email}</p>
+            <p>Comment : {item.body}</p>
+            {/* <p>Date : {format(new Date(2014, 1, 11), "yyyy-MM-dd")}</p> */}
+            <div>______</div>
           </li>
         ))}
       </ul>

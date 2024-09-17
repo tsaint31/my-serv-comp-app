@@ -21,8 +21,10 @@ export async function BlogPost({ promise }: { promise: any }) {
   const post = await promise;
   return (
     <>
-      <h1 className="text-2xl font-bold text-center">{post.title}</h1>
-      <p className="text-lg">{post.body}</p>
+      <p className="text-lg">
+        FAKE NEWS : ALEXANDRE HAS BEEN SEEN RUNNING FASTER THAN FLORIAN
+        YESTERDAY
+      </p>
     </>
   );
 }
@@ -35,13 +37,13 @@ export default async function Post({ params }: { params: any }) {
       <div className="flex flex-row">
         <div className="basis-1/2">
           <h2 style={{ color: "red" }} className="text-xl">
-            Comments from Client Components
+            Comments Loaded from Client Component
           </h2>
           <CommentsClient id={params.slug} />
         </div>
         <div className="basis-1/2">
           <h2 style={{ color: "blue" }} className="text-xl">
-            Comments from React Server Components
+            Comments Loaded from React Server Component
           </h2>
           <Suspense fallback={<div>Loading Comments..</div>}>
             <CommentsServer params={params} />

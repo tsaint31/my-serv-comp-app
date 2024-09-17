@@ -31,10 +31,10 @@ export async function CommentsServer({ params }: { params: any }) {
       <ul>
         {comments.map((item: any) => (
           <li key={item.id}>
-            <h3>{item.name}</h3>
-            <p>{item.email}</p>
-            <p>{item.body}</p>
-            <p>{format(new Date(2014, 1, 11), "yyyy-MM-dd")}</p>
+            <p>Name : {item.email}</p>
+            <p>Comment : {item.body}</p>
+            <p>Date : {format(new Date(2014, 1, 11), "yyyy-MM-dd")}</p>
+            <div>______</div>
           </li>
         ))}
       </ul>
